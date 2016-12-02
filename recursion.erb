@@ -1,0 +1,43 @@
+
+def basecase1(stairs)
+  if stairs == 1
+    return 1
+  elsif stairs < 1
+    return 0
+  else
+    a = basecase1(stairs - 1)
+    b = basecase1(stairs - 2)
+    c = basecase1(stairs - 3)
+  end
+  return a + b + c
+end
+
+def basecase2(stairs)
+  if stairs == 2
+    return 1
+  elsif stairs < 2
+    return 0
+  else
+    a = basecase2(stairs - 1)
+    b = basecase2(stairs - 2)
+    c = basecase2(stairs - 3)
+  end
+  return a + b + c
+end
+
+def basecase3(stairs)
+  if stairs == 3
+    return 1
+  elsif stairs < 3
+    return 0
+  else
+    a = basecase3(stairs - 1)
+    b = basecase3(stairs - 2)
+    c = basecase3(stairs - 3)
+  end
+  return a + b + c
+end
+
+total = basecase1(7) + basecase2(7) + basecase3(7)
+
+p total
